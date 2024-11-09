@@ -12,6 +12,7 @@ import { MedprescriptionsComponent } from './medprescriptions/medprescriptions.c
 import { LabadviceComponent } from './labadvice/labadvice.component';
 import { LabtestComponent } from './labtest/labtest.component';
 import { BillingComponent } from './billing/billing.component';
+import { LabtestresultComponent } from './labtestresult/labtestresult.component';
 
 const routes: Routes = [
   //empty routes
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'labtests', component: LabtestComponent,
     loadChildren: () => import('./labtest/labtest.module').then(x => x.LabtestModule)
+  },
+  {
+    path: 'labresults', component: LabtestresultComponent,
+    loadChildren: () => import('./labtestresult/labtestresult.module').then(x => x.LabtestresultModule)
   },
   {
     path: 'billings', component: BillingComponent,
